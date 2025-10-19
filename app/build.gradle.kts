@@ -47,3 +47,25 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:34.3.0"))
     implementation("com.google.firebase:firebase-analytics")
 }
+dependencies {
+    // Firebase BOM (Bill of Materials) to ensure compatible versions
+    implementation platform('com.google.firebase:firebase-bom:32.7.0')
+
+    // Firebase Realtime Database
+    implementation 'com.google.firebase:firebase-database'
+
+    // Firebase Authentication (if used)
+    implementation 'com.google.firebase:firebase-auth'
+
+    // RecyclerView
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+
+    // CardView
+    implementation 'androidx.cardview:cardview:1.0.0'
+}
+apply plugin: 'com.google.gms.google-services'
+buildscript {
+    dependencies {
+        classpath 'com.google.gms:google-services:4.4.0'
+    }
+}

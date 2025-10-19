@@ -18,6 +18,10 @@
             android:label="Login_Page"
             android:parentActivityName=".MainActivity"
             android:exported="false"/>
+        <activity android:name=".AdminDashboardActivity" />
+        <activity android:name=".ComplaintDetailsActivity" />
+
+
         <activity
             android:name=".MainActivity"
             android:exported="true">

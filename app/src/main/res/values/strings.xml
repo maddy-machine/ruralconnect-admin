@@ -1,7 +1,15 @@
 <resources>
-    <string name="admin_login_title">Admin Login</string>
-    <string name="admin_welcome">Welcome, Admin</string>
-    <string name="admin_log_in">Admin Log in</string>
-    <string name="welcome_to_rural_connect">Welcome to Rural Connect</string>
-
+    <string name="app_name">RuralConnect Admin</string>
+    <string name="admin_log_in">Admin Login</string>
+    <string name="enter_mobile_number">Enter your mobile number to proceed</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="enter_phone_number">Enter phone number</string>
+    <string name="send_otp">Send OTP</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="verify_otp">Verify OTP</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="enter_your_mobile_number_to_proceed">Enter your mobile number to proceed</string>
+    <string name="mobilenumber">Mobile Number</string>
 </resources>
