@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void openActivity(View view) {
         Toast.makeText(this, "Opening Login Page", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(this, Login_page.class);
+        Intent intent = new Intent(this, Admin_Login_page.class);
         startActivity(intent);
     }
 }

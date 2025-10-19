@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Rural Connect"
+rootProject.name = "Rural ConnectAdmin"
 include(":app")

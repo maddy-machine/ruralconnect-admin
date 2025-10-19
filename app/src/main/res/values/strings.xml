@@ -1,4 +1,7 @@
 <resources>
-    <string name="app_name">Rural Connect</string>
-    <string name="welcome_to_rural_connect">Welcome To Rural Connect</string>
+    <string name="admin_login_title">Admin Login</string>
+    <string name="admin_welcome">Welcome, Admin</string>
+    <string name="admin_log_in">Admin Log in</string>
+    <string name="welcome_to_rural_connect">Welcome to Rural Connect</string>
+
 </resources>
