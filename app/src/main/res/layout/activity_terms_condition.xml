@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:background="#795548"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@android:drawable/ic_menu_revert"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Back"
+                app:tint="#FFFFFF" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Terms and Conditions"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="16dp"/>
+        </LinearLayout>
+
+        <!-- Last Updated -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Effective Date: October 28, 2025"
+            android:textSize="12sp"
+            android:textColor="#999999"
+            android:textStyle="italic"
+            android:layout_margin="16dp"/>
+
+        <!-- Content Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- Acceptance of Terms -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1. Acceptance of Terms"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="By downloading, installing, or using RuralConnect (&quot;the App&quot;), you agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use the App."
+                    android:textSize="14sp"
+                    android:textColor="#666666"
+                    android:lineSpacingExtra="4dp"
+                    android:layout_marginBottom="20dp"/>
+
+                <!-- User Accounts -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2. User Accounts"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• You must provide accurate and complete information during registration\n• You are responsible for maintaining the confidentiality of your account credentials\n• You must be at least 13 years old to use this App\n• One person may not maintain multiple accounts\n• You are responsible for all activities under your account"
+                    android:textSize="14sp"
+                    android:textColor="#666666"
+                    android:lineSpacingExtra="4dp"
+                    android:layout_marginBottom="20dp"/>
+
+                <!-- User Responsibilities -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3. User Responsibilities"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="When using RuralConnect, you agree to:\n\n• Provide truthful and accurate complaint information\n• Not submit false, misleading, or malicious complaints\n• Respect the privacy and rights of others\n• Not use the App for illegal purposes\n• Not interfere with the App's functionality\n• Not attempt to gain unauthorized access to any systems\n• Comply with all applicable laws and regulations"
+                    android:textSize="14sp"
+                    android:textColor="#666666"
+                    android:lineSpacingExtra="4dp"
+                    android:layout_marginBottom="20dp"/>
+
+                <!-- Prohibited Conduct -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4. Prohibited Conduct"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="You may NOT:\n\n• Post offensive, abusive, or discriminatory content\n• Harass, threaten, or defame others\n• Upload malware or viruses\n• Spam or send unsolicited messages\n• Reverse engineer or decompile the App\n• Violate intellectual property rights\n• Use automated systems to access the App"
+                    android:textSize="14sp"
+                    android:textColor="#666666"
+                    android:lineSpacingExtra="4dp"
+                    android:layout_marginBottom="20dp"/>
+
+                <!-- Complaint Submission -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5. Complaint Submission"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Complaints must relate to genuine civic issues\n• You grant us the right to share complaint information with relevant authorities\n• We do not guarantee resolution timeframes\n• We reserve the right to remove inappropriate complaints\n• Photos uploaded must not violate privacy or contain inappropriate content"
+                    android:textSize="14sp"
+                    android:textColor="#666666"
+                    android:lineSpacingExtra="4dp"
+                    android:layout_marginBottom="20dp"/>
+
+                <!-- Intellectual Property -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6. Intellectual Property"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="All content, features, and functionality of RuralConnect are owned by Error-404 Team and are protected by copyright, trademark, and other intellectual property laws. You may not copy, modify, distribute, or reproduce any part of the App without permission."
+                    android:textSize="14sp"
+                    android:textColor="#666666"
+                    android:lineSpacingExtra="4dp"
+                    android:layout_marginBottom="20dp"/>
+
+                <!-- Disclaimer -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7. Disclaimer of Warranties"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="THE APP IS PROVIDED &quot;AS IS&quot; WITHOUT WARRANTIES OF ANY KIND. WE DO NOT GUARANTEE THAT:\n\n• The App will be uninterrupted or error-free\n• Defects will be corrected\n• The App is free of viruses or harmful components\n• Results obtained will be accurate or reliable"
+                    android:textSize="14sp"
+                    android:textColor="#666666"
+                    android:lineSpacingExtra="4dp"
+                    android:layout_marginBottom="20dp"/>
+
+                <!-- Limitation of Liability -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8. Limitation of Liability"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="To the maximum extent permitted by law, Error-404 Team shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of or inability to use the App."
+                    android:textSize="14sp"
+                    android:textColor="#666666"
+                    android:lineSpacingExtra="4dp"
+                    android:layout_marginBottom="20dp"/>
+
+                <!-- Termination -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9. Termination"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="We reserve the right to suspend or terminate your account at any time if you violate these Terms and Conditions. You may also delete your account at any time through the App settings."
+                    android:textSize="14sp"
+                    android:textColor="#666666"
+                    android:lineSpacingExtra="4dp"
+                    android:layout_marginBottom="20dp"/>
+
+                <!-- Changes to Terms -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10. Changes to Terms"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="We reserve the right to modify these Terms and Conditions at any time. Changes will be effective immediately upon posting. Your continued use of the App after changes constitutes acceptance of the modified terms."
+                    android:textSize="14sp"
+                    android:textColor="#666666"
+                    android:lineSpacingExtra="4dp"
+                    android:layout_marginBottom="20dp"/>
+
+                <!-- Governing Law -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="11. Governing Law"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="These Terms and Conditions are governed by the laws of India. Any disputes shall be subject to the exclusive jurisdiction of the courts in Delhi, India."
+                    android:textSize="14sp"
+                    android:textColor="#666666"
+                    android:lineSpacingExtra="4dp"
+                    android:layout_marginBottom="20dp"/>
+
+                <!-- Contact -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12. Contact Information"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="For questions about these Terms and Conditions:\n\nEmail: support@ruralconnect.com\nPhone: +91-1800-123-4567\n\nError-404 Team\nNIT Delhi"
+                    android:textSize="14sp"
+                    android:textColor="#666666"
+                    android:lineSpacingExtra="4dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Agreement Note -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            android:backgroundTint="#EFEBE9">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="By using RuralConnect, you agree to these Terms and Conditions."
+                android:textSize="13sp"
+                android:textColor="#795548"
+                android:textStyle="bold"
+                android:padding="12dp"
+                android:gravity="center"/>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

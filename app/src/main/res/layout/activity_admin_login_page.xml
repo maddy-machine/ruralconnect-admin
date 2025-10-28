@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cream"
-    tools:context=".Admin_Login_page">
+    tools:context=".AdminLoginpage">
 
     <!-- App Logo -->
     <androidx.cardview.widget.CardView
@@ -23,9 +23,9 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:contentDescription="@string/app_logo"
             android:scaleType="centerCrop"
-            android:src="@drawable/logo2"
-            android:contentDescription="@string/app_logo"/>
+            android:src="@drawable/login_logo" />
     </androidx.cardview.widget.CardView>
 
     <!-- Admin Login -->
@@ -73,14 +73,23 @@
             android:autofillHints="password"/>
 
         <!-- Forgot Password -->
+
+        <!-- Add this after your password EditText and before the Login button -->
+
         <TextView
-            android:id="@+id/forgotPassword"
+            android:id="@+id/tvForgotPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginTop="8dp"
             android:text="@string/forgot_password"
-            android:textColor="@color/app_blue" />
+            android:textColor="#2196F3"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp"/>
+
 
         <!-- Login Button -->
         <Button

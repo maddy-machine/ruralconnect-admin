@@ -3,5 +3,5 @@
     <font
         android:fontStyle="normal"
         android:fontWeight="700"
-        android:font="@font/bitcoin" />
+        android:font="@font/app_bold_font" />
 </font-family>

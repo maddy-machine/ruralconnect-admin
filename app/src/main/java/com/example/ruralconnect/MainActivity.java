@@ -16,8 +16,8 @@ public class MainActivity extends AppCompatActivity {
 
         Button getStartedButton = findViewById(R.id.button);
         getStartedButton.setOnClickListener(v -> {
-            Toast.makeText(this, "Opening Login Page", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(this, Admin_Login_page.class);
+            Toast.makeText(this, getString(R.string.opening_login_page), Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, AdminLoginpage.class);
             startActivity(intent);
         });
     }
