@@ -5,14 +5,12 @@ plugins {
 
 android {
     namespace = "com.example.ruralconnect"
-    compileSdk {
-        version = release(36)
-    }
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.ruralconnect"
         minSdk = 26
-        targetSdk = 36
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -29,8 +27,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
 }
 
@@ -39,33 +37,25 @@ dependencies {
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
-    implementation(libs.google.material)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-    implementation("com.google.firebase:firebase-auth:22.2.0")
-    implementation(platform("com.google.firebase:firebase-bom:34.3.0"))
-    implementation("com.google.firebase:firebase-analytics")
-}
-dependencies {
+
     // Firebase BOM (Bill of Materials) to ensure compatible versions
-    implementation platform('com.google.firebase:firebase-bom:32.7.0')
+    implementation(platform(libs.firebase.bom))
 
     // Firebase Realtime Database
-    implementation 'com.google.firebase:firebase-database'
+    implementation(libs.firebase.database)
 
-    // Firebase Authentication (if used)
-    implementation 'com.google.firebase:firebase-auth'
+    // Firebase Authentication
+    implementation(libs.firebase.auth)
+
+    // Firebase Analytics
+    implementation(libs.firebase.analytics)
 
     // RecyclerView
-    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+    implementation(libs.recyclerview)
 
     // CardView
-    implementation 'androidx.cardview:cardview:1.0.0'
-}
-apply plugin: 'com.google.gms.google-services'
-buildscript {
-    dependencies {
-        classpath 'com.google.gms:google-services:4.4.0'
-    }
+    implementation(libs.cardview)
 }

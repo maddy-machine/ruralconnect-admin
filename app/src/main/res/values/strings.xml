@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">RuralConnect Admin</string>
+    <string name="app_logo">App Logo</string>
     <string name="admin_log_in">Admin Login</string>
     <string name="enter_mobile_number">Enter your mobile number to proceed</string>
     <string name="mobile_number">Mobile Number</string>
@@ -12,4 +13,24 @@
     <string name="login">Login</string>
     <string name="enter_your_mobile_number_to_proceed">Enter your mobile number to proceed</string>
     <string name="mobilenumber">Mobile Number</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="welcome_to_rural_connect">Welcome to Rural Connect</string>
+    <string name="delivering_government_services">Delivering government services to rural homes with speed and care !</string>
+    <string name="water_supply_issue">Water supply issue</string>
+    <string name="category_water">Category: Water</string>
+    <string name="date_2025_10_19">2025-10-19</string>
+    <string name="pending">Pending</string>
+    <string name="complaint_details">Complaint Details</string>
+    <string name="title">Title</string>
+    <string name="complaint_title">Complaint Title</string>
+    <string name="category">Category</string>
+    <string name="water_supply">Water Supply</string>
+    <string name="description">Description</string>
+    <string name="full_description_of_the_complaint">Full description of the complaint...</string>
+    <string name="current_status">Current Status</string>
+    <string name="date_submitted">Date Submitted</string>
+    <string name="user_id_user123">User ID: user123</string>
+    <string name="update_status">Update Status</string>
+    <string name="delete_complaint">Delete Complaint</string>
+    <string name="back">Back</string>
 </resources>
