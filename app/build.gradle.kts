@@ -53,6 +53,9 @@ dependencies {
     // Firebase Analytics
     implementation(libs.firebase.analytics)
 
+    // Firebase Storage
+    implementation("com.google.firebase:firebase-storage")
+
     // RecyclerView
     implementation(libs.recyclerview)
 

@@ -1,24 +1,22 @@
 package com.example.ruralconnect;
 
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.List;
 
-class RecentComplaintsAdapter extends RecyclerView.Adapter<RecentComplaintsAdapter.ViewHolder> {
+// Adapter for displaying a list of recent complaints in a RecyclerView.
+public class RecentComplaintAdapter extends RecyclerView.Adapter<RecentComplaintAdapter.ViewHolder> {
 
-    private Context context;
-    private List<Complaint> complaintList;
+    private final Context context;
+    private final List<Complaint> complaintList;
 
-    public RecentComplaintsAdapter(Context context, List<Complaint> complaintList) {
+    // Constructor
+    public RecentComplaintAdapter(Context context, List<Complaint> complaintList) {
         this.context = context;
         this.complaintList = complaintList;
     }
@@ -26,38 +24,19 @@ class RecentComplaintsAdapter extends RecyclerView.Adapter<RecentComplaintsAdapt
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        // Inflates the layout for each complaint item
         View view = LayoutInflater.from(context).inflate(R.layout.item_recent_complaint, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        // Binds data to the views in each item
         Complaint complaint = complaintList.get(position);
-
-        holder.tvRecentTitle.setText(complaint.getTitle());
-        holder.tvRecentCategory.setText("Category: " + complaint.getCategory());
-        holder.tvRecentDate.setText(complaint.getDate());
-        holder.tvRecentStatus.setText(complaint.getStatus());
-
-        // Set status background color
-        switch (complaint.getStatus()) {
-            case "Pending":
-                holder.tvRecentStatus.setBackgroundColor(Color.parseColor("#FF9800"));
-                break;
-            case "In Progress":
-                holder.tvRecentStatus.setBackgroundColor(Color.parseColor("#2196F3"));
-                break;
-            case "Resolved":
-                holder.tvRecentStatus.setBackgroundColor(Color.parseColor("#8BC34A"));
-                break;
-        }
-
-        // Click to view details
-        holder.itemView.setOnClickListener(v -> {
-            Intent intent = new Intent(context, ComplaintDetailsActivity.class);
-            intent.putExtra("complaint_id", complaint.getId());
-            context.startActivity(intent);
-        });
+        holder.title.setText(complaint.getTitle());
+        holder.category.setText(complaint.getCategory());
+        holder.date.setText(complaint.getDate());
+        holder.status.setText(complaint.getStatus());
     }
 
     @Override
@@ -65,15 +44,19 @@ class RecentComplaintsAdapter extends RecyclerView.Adapter<RecentComplaintsAdapt
         return complaintList.size();
     }
 
-    static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView tvRecentTitle, tvRecentCategory, tvRecentDate, tvRecentStatus;
+    // ViewHolder class to hold the views for each complaint item
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        public final TextView title;
+        public final TextView category;
+        public final TextView date;
+        public final TextView status;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            tvRecentTitle = itemView.findViewById(R.id.tvRecentTitle);
-            tvRecentCategory = itemView.findViewById(R.id.tvRecentCategory);
-            tvRecentDate = itemView.findViewById(R.id.tvRecentDate);
-            tvRecentStatus = itemView.findViewById(R.id.tvRecentStatus);
+            title = itemView.findViewById(R.id.tvRecentTitle);
+            category = itemView.findViewById(R.id.tvRecentCategory);
+            date = itemView.findViewById(R.id.tvRecentDate);
+            status = itemView.findViewById(R.id.tvRecentStatus);
         }
     }
 }

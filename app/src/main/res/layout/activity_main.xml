@@ -50,7 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:fontFamily="@font/bold_font"
+        android:fontFamily="@font/app_bold_font"
         android:gravity="center"
         android:padding="20sp"
         android:text="@string/delivering_government_services"

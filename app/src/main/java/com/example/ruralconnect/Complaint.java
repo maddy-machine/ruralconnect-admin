@@ -8,6 +8,8 @@ public class Complaint {
     private String status;
     private String date;
     private String userId;
+    private String location;
+    private String imageUrl;
 
     // Empty constructor required for Firebase
     public Complaint() {
@@ -54,6 +56,14 @@ public class Complaint {
         return userId;
     }
 
+    public String getLocation() {
+        return location;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
     // Setters
     public void setId(String id) {
         this.id = id;
@@ -81,5 +91,13 @@ public class Complaint {
 
     public void setUserId(String userId) {
         this.userId = userId;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }
