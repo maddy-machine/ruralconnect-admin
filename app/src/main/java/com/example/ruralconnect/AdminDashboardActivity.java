@@ -12,7 +12,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.ruralconnect.RecentComplaintAdapter;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -29,7 +28,7 @@ public class AdminDashboardActivity extends AppCompatActivity {
     // UI Components
     private TextView tvWelcome, tvTotalComplaints, tvPendingComplaints;
     private TextView tvInProgressComplaints, tvResolvedComplaints;
-    private Button btnViewAllComplaints, btnManageCategories, btnViewReports, btnLogout;
+    private Button btnViewAllComplaints, btnHelp, btnViewReports, btnLogout;
     private ImageButton btnSettings;
     private RecyclerView rvRecentComplaints;
 
@@ -74,7 +73,7 @@ public class AdminDashboardActivity extends AppCompatActivity {
         tvInProgressComplaints = findViewById(R.id.tvInProgressComplaints);
         tvResolvedComplaints = findViewById(R.id.tvResolvedComplaints);
         btnViewAllComplaints = findViewById(R.id.btnViewAllComplaints);
-        btnManageCategories = findViewById(R.id.btnManageCategories);
+        btnHelp = findViewById(R.id.btnHelp);
         btnViewReports = findViewById(R.id.btnViewReports);
         btnLogout = findViewById(R.id.btnLogout);
         btnSettings = findViewById(R.id.btnProfile); // Corrected ID
@@ -127,11 +126,11 @@ public class AdminDashboardActivity extends AppCompatActivity {
         btnViewAllComplaints.setOnClickListener(v -> 
             startActivity(new Intent(this, ViewComplaintsActivity.class)));
 
-        btnManageCategories.setOnClickListener(v -> 
-            Toast.makeText(this, getString(R.string.manage_categories_soon), Toast.LENGTH_SHORT).show());
+        btnHelp.setOnClickListener(v -> 
+            startActivity(new Intent(this, HelpActivity.class)));
 
-        btnViewReports.setOnClickListener(v -> 
-            Toast.makeText(this, getString(R.string.reports_feature_soon), Toast.LENGTH_SHORT).show());
+        btnViewReports.setOnClickListener(v ->
+            startActivity(new Intent(this, viewreports.class)));
 
         btnSettings.setOnClickListener(v -> 
             startActivity(new Intent(this, SettingsActivity.class)));

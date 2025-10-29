@@ -28,7 +28,7 @@ public class ComplaintDetailsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_complaint_setails);
+        setContentView(R.layout.activity_complaint_details);
 
         // Get complaint ID from intent
         complaintId = getIntent().getStringExtra("complaint_id");
