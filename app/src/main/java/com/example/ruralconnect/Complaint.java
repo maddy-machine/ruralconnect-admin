@@ -17,7 +17,7 @@ public class Complaint {
 
     // Constructor with parameters
     public Complaint(String id, String title, String category, String description,
-                     String status, String date, String userId) {
+                     String status, String date, String userId, String location, String imageUrl) {
         this.id = id;
         this.title = title;
         this.category = category;
@@ -25,6 +25,8 @@ public class Complaint {
         this.status = status;
         this.date = date;
         this.userId = userId;
+        this.location = location;
+        this.imageUrl = imageUrl;
     }
 
     // Getters

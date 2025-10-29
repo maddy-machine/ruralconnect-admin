@@ -12,7 +12,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.SwitchCompat;
@@ -23,14 +22,6 @@ import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.EmailAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -48,7 +39,6 @@ public class SettingsActivity extends AppCompatActivity {
     // Firebase
     private FirebaseAuth mAuth;
     private FirebaseUser currentUser;
-    private DatabaseReference usersRef;
     private SharedPreferences preferences;
 
     @Override
@@ -59,7 +49,6 @@ public class SettingsActivity extends AppCompatActivity {
         // Initialize Firebase
         mAuth = FirebaseAuth.getInstance();
         currentUser = mAuth.getCurrentUser();
-        usersRef = FirebaseDatabase.getInstance().getReference("users");
 
         // Initialize SharedPreferences
         preferences = getSharedPreferences("AppSettings", MODE_PRIVATE);
@@ -103,50 +92,10 @@ public class SettingsActivity extends AppCompatActivity {
 
     private void loadUserData() {
         if (currentUser != null) {
-            final String userId = currentUser.getUid();
             String email = currentUser.getEmail();
 
-            usersRef.child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                    if (dataSnapshot.exists()) {
-                        // User data exists, load it
-                        String name = dataSnapshot.child("name").getValue(String.class);
-                        String emailFromDb = dataSnapshot.child("email").getValue(String.class);
-
-                        if (name != null && !name.isEmpty()) {
                             tvUserName.setText(name);
-                        } else {
-                            tvUserName.setText(email != null ? email.split("@")[0] : "User");
-                        }
-
-                        tvUserEmail.setText(emailFromDb != null ? emailFromDb : email);
-                    } else {
-                        // User data doesn't exist, create it
-                        String defaultName = email != null ? email.split("@")[0] : "User";
-
-                        Map<String, Object> userData = new HashMap<>();
-                        userData.put("userId", userId);
-                        userData.put("name", defaultName);
-                        userData.put("email", email);
-                        userData.put("phone", "Not provided");
-                        userData.put("role", "user");
-                        userData.put("registrationDate", System.currentTimeMillis());
-
-                        usersRef.child(userId).setValue(userData)
-                                .addOnSuccessListener(aVoid -> {
-                                    tvUserName.setText(defaultName);
                                     tvUserEmail.setText(email);
-                                });
-                    }
-                }
-
-                @Override
-                public void onCancelled(@NonNull DatabaseError error) {
-                    // Handle error
-                    Toast.makeText(SettingsActivity.this, "Failed to load user data.", Toast.LENGTH_SHORT).show();
-                }
-            });
         }
     }
 
@@ -220,12 +169,10 @@ public class SettingsActivity extends AppCompatActivity {
 
         // Privacy Policy
         layoutPrivacyPolicy.setOnClickListener(v -> {
-            startActivity(new Intent(this, PrivacyPolicyActivity.class));
         });
 
         // Terms & Conditions
         layoutTermsConditions.setOnClickListener(v -> {
-            startActivity(new Intent(this, TermsConditionsActivity.class));
         });
 
         // Logout
